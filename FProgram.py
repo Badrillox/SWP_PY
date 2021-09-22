@@ -13,8 +13,18 @@ class FProgram:
         i+=1
     print("Hello Pythonworld")
     print(shout("i am a python programm, loooool"))
-
-    a = 3
-    b = 8
+    print()
+    a = input("Enter your number 1: ")
+    b = input("Enter your number 2: ")
+    def getNums(a, b):
+        print("A ist: ", a)
+        print("B ist: ", b)
     if a < b:
-        print(a, b, "A ist kleiner als B")
+        getNums(a, b)
+        print("A ist kleiner als B")
+    elif a == b:
+        getNums(a, b)
+        print("A und B sind gleich groß")
+    else:
+        getNums(a, b)
+        print("B ist kleiner als A!")
