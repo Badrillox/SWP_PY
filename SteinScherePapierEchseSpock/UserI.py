@@ -1,5 +1,7 @@
 import gamelogic_a
 import gamelogic_m
+
+
 def againstAI():
     print("Difficulty of the AI")
     print("e ... Easy AI")              # using Random numbers
@@ -19,6 +21,8 @@ def againstAI():
     else:
         print("Wrong input please try again")
         againstAI()
+
+
 def multiplayer():
     print("Multiplayer Mode")
     print("m ... play against a friend [1v1]")
@@ -33,6 +37,8 @@ def multiplayer():
         print("Wrong input please try again")
         multiplayer()
     pass
+
+
 def gamemenu():
     print("Choose your playmode")
     print("a ... Against AI")
@@ -49,6 +55,8 @@ def gamemenu():
     else:
         print("Wrong input please try again")
         gamemenu()
+
+
 def mainmenu():
     print("Welcome to scissors-stone-paper-lizard-spock")
     print("p ... playing th game")
