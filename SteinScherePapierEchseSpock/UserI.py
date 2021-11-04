@@ -3,12 +3,12 @@ import gamelogic_m
 
 
 def againstAI():
-    print("Difficulty of the AI")
-    print("e ... Easy AI")              # using Random numbers
-    print("m ... Medium AI")            # 20 entries in database
-    print("h ... Hard AI")              # database
+    print("difficulty of the AI")
+    print("e ... easy AI")              # using Random numbers
+    print("m ... medium AI")            # 20 entries in database
+    print("h ... hard AI")              # database
     print("b ... back to game menu")
-    usinput = input("Choose your option: \n")
+    usinput = input("choose your option: \n")
     usinput = usinput.lower()
     if usinput == "e":
         gamelogic_a.game("e")
@@ -40,7 +40,7 @@ def multiplayer():
 
 
 def gamemenu():
-    print("Choose your playmode")
+    print("choose your playmode")
     print("a ... Against AI")
     print("m ... Against other players on the same PC")
     print("b ... Back to the menu")
@@ -58,15 +58,15 @@ def gamemenu():
 
 
 def mainmenu():
-    print("Welcome to scissors-stone-paper-lizard-spock")
+    print("welcome to scissors-stone-paper-lizard-spock")
     print("p ... playing th game")
     print("e ... exiting the game")
-    usinput = input("Choose your option: \n")
+    usinput = input("choose your option: \n")
     usinput = usinput.lower()
     if usinput == "e":
-        print("Goodbye have a nice day")
+        print("goodbye have a nice day")
     elif usinput == "p":
         gamemenu()
     else:
-        print("Wrong input please try again")
+        print("wrong input please try again")
         mainmenu()

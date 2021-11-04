@@ -1,8 +1,6 @@
 import random
 import UserI
 
-#import replit as replit
-
 
 def numbertoString(n):
     if n == 0:
@@ -50,10 +48,10 @@ def game(level):
             pass
         userinput = (int(userinputs))
         if (user == True):
-            print("User: " + numbertoString(userinput))
+            print("user: " + numbertoString(userinput))
             print("BOT: " + numbertoString(compinput))
             print(logic(userinput,compinput))
-            userinputs = input("Continue playing [c] or back to menu [m]")
+            userinputs = input("continue playing [c] or back to menu [m]")
             if (userinputs.lower() == "m"):
                 gameover = True
     UserI.mainmenu()
