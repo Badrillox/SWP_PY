@@ -20,7 +20,7 @@ def numbertoString(n):
 def logic(n, u):
     type(n)
     type(u)
-    databaseT = r"C:\Users\danis\PycharmProjects\5AHW\SteinScherePapierEchseSpock\StScPaLiSp_Python.db"
+    databaseT = r"C:\Users\Michi\Desktop\Schule\5AHWII\Python\SWP_PY\SteinScherePapierEchseSpock\StScPaLiSp_Python.db"
     conn = databaseI.create_database(databaseT)
     compare = n - u + 5
     if compare % 5 == 0:
