@@ -1,3 +1,4 @@
+#import replit
 import UserI
 
 
@@ -19,12 +20,17 @@ def logic(n, u):
     type(u)
     compare = n - u + 5
     if compare % 5 == 0:
-        return "draw"
+        return "draw between users"
     if (compare % 5 + 1) % 2 == 0:
-        return "win"
+        if n > u:
+            return "User 1 wins, User 2 lost"
+        else:
+            return "User 1 lost, User 2 wins"
     if (compare % 5) % 2 == 0:
-        return "lose"
-
+        if n > u:
+            return "User 1 wins, User 2 lost"
+        else:
+            return "User 1 lost, User 2 wins"
 
 def game():
     gameover = False
