@@ -20,20 +20,19 @@ def numbertoString(n):
 def logic(n, u):
     type(n)
     type(u)
-    databaseT = r"C:\Users\Michi\Desktop\Schule\5AHWII\Python\SWP_PY\SteinScherePapierEchseSpock\StScPaLiSp_Python.db"
-    conn = databaseI.create_database(databaseT)
+    databaseT = r"C:\Users\danis\PycharmProjects\5AHW\SteinScherePapierEchseSpock\StScPaLiSp_Python.db"
     compare = n - u + 5
     if compare % 5 == 0:
         result = "draw"
-        databaseI.insert(databaseT, n, u, result)
+        databaseI.insert(databaseT, numbertoString(n), numbertoString(u), result)
         return "draw"
     if (compare % 5 + 1) % 2 == 0:
         result = "win"
-        databaseI.insert(databaseT, n, u, result)
+        databaseI.insert(databaseT, numbertoString(n), numbertoString(u), result)
         return "win"
     if (compare % 5) % 2 == 0:
         result = "lose"
-        databaseI.insert(databaseT, n, u, result)
+        databaseI.insert(databaseT, numbertoString(n), numbertoString(u), result)
         return "lose"
 
 
