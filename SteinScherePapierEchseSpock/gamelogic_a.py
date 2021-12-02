@@ -24,15 +24,15 @@ def logic(n, u):
     compare = n - u + 5
     if compare % 5 == 0:
         result = "draw"
-        databaseI.insert(databaseT, numbertoString(n), numbertoString(u), result)
+        databasehandler.insert(databaseT, numbertoString(n), numbertoString(u), result)
         return "draw"
     if (compare % 5 + 1) % 2 == 0:
         result = "win"
-        databaseI.insert(databaseT, numbertoString(n), numbertoString(u), result)
+        databasehandler.insert(databaseT, numbertoString(n), numbertoString(u), result)
         return "win"
     if (compare % 5) % 2 == 0:
         result = "lose"
-        databaseI.insert(databaseT, numbertoString(n), numbertoString(u), result)
+        databasehandler.insert(databaseT, numbertoString(n), numbertoString(u), result)
         return "lose"
 
 
