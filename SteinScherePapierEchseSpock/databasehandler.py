@@ -37,9 +37,9 @@ def insert(db_file, userinput, aiinput, result):
 
 def selectResult(db_file):
     conn = sqlite3.connect(db_file)
-    sqlWin = "select count(game) from game_outputs where game = 'win'"
-    sqlLose = "select count(game) from game_outputs where game = 'lose'"
-    sqlDraw = "select count(game) from game_outputs where game = 'draw'"
+    sqlWin = "SELECT count(game) FROM game_outputs WHERE game = 'win'"
+    sqlLose = "SELECT count(game) FROM game_outputs WHERE game = 'lose'"
+    sqlDraw = "SELECT count(game) FROM game_outputs WHERE game = 'draw'"
     cur = conn.cursor()
     cur.execute(sqlWin)
     rowsWins = cur.fetchall()

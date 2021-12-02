@@ -2,7 +2,7 @@ import UserI
 import databasehandler
 
 if __name__ == "__main__":
-    databaseT = r"C:\Users\danis\PycharmProjects\5AHW\SteinScherePapierEchseSpock\StScPaLiSp_Python.db"
-    databaseI.create_database(databaseT)
+    dbPath = r"C:\Users\Michi\Desktop\Schule\5AHWII\Python\SWP_PY\SteinScherePapierEchseSpock\StScPaLiSp_Python.db"
+    databasehandler.create_database(dbPath)
     UserI.mainmenu()
 

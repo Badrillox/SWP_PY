@@ -56,11 +56,11 @@ def stats():
     usinput = input("Choose your option: \n")
     usinput = usinput.lower()
     if usinput == "y":
-        databaseT = r"C:\Users\danis\PycharmProjects\5AHW\SteinScherePapierEchseSpock\StScPaLiSp_Python.db"
+        dbPath = r"C:\Users\Michi\Desktop\Schule\5AHWII\Python\SWP_PY\SteinScherePapierEchseSpock\StScPaLiSp_Python.db"
         print("Here can you see your statistic:")
-        databaseI.selectResult(databaseT)
-        databaseI.selectUser(databaseT)
-        databaseI.selectAI(databaseT)
+        databasehandler.selectResult(dbPath)
+        databasehandler.selectUser(dbPath)
+        databasehandler.selectAI(dbPath)
         print("\nb ... Back to menu")
         print("e ... Exit the game")
         usinput = input("Choose your option: \n")
