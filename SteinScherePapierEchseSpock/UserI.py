@@ -1,6 +1,6 @@
 import gamelogic_a
 import gamelogic_m
-import databaseI
+import databasehandler
 def againstAI():
     print("Difficulty of the AI")
     print("e ... Easy AI")              # using Random numbers

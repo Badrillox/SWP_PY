@@ -1,5 +1,5 @@
 import UserI
-import databaseI
+import databasehandler
 
 if __name__ == "__main__":
     databaseT = r"C:\Users\danis\PycharmProjects\5AHW\SteinScherePapierEchseSpock\StScPaLiSp_Python.db"
