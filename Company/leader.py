@@ -1,5 +1,11 @@
-from person import person
+from person import Person
+from person import Gender
 
-class leader:
-    def __init__(self, group, personId, name, age, gender):
+
+class Leader:
+    def __init__(self, group, person_id, name, age, gender=Gender.NotSpecified):
         self.group = group
+        self.person_id = person_id
+        self.name = name
+        self.age = age
+        self.gender = gender

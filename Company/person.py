@@ -1,5 +1,6 @@
 import enum
 import company
+import department as dp
 
 class Gender(enum.Enum):
     Male = 1
@@ -8,18 +9,13 @@ class Gender(enum.Enum):
 
 
 class Person:
-    def __init__(self, personId, name, age, gender, department):
-        super(company).__init__(department)
-        self.personId = personId
+    def __init__(self, person_id, name, age=0, gender=Gender.NotSpecified,
+                 department=dp.Department.NotSpecified):
+        self.personId = person_id
         self.name = name
         self.age = age
         self.gender = gender
-
-    def gender(self):
-        pass
-
-    def department(self):
-        pass
+        self.department = department
 
     def __str__(self):
-        pass
+        return "Name: " + self.name + "\nage\t: " + self.age + "\ngender\t: " + self.gender + "\ndepartment\t: " + self.department
