@@ -10,14 +10,12 @@ class Gender(enum.Enum):
 
 
 class Person:
-    def __init__(self, person_id=0, lastname="", firstname="", age=0, gender=Gender.NotSpecified,
-                 department=dp.Department.NotSpecified):
+    def __init__(self, person_id=0, lastname="", firstname="", age=0, gender=Gender.NotSpecified):
         self.personId = person_id
         self.lastname = lastname
         self.firstname = firstname
         self.age = age
         self.gender = gender
-        self.department = department
 
     def __str__(self):
-        return "Name: " + self.name + "\nage\t: " + self.age + "\ngender\t: " + self.gender + "\ndepartment\t: " + self.department
+        return "Name: " + self.name + "\nage\t: " + self.age + "\ngender\t: " + self.gender

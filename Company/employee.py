@@ -4,7 +4,7 @@ from department import Department
 
 
 class Employee(Person):
-    def __init__(self, lastname= "", firstname="", age: int = 0,
+    def __init__(self, lastname="", firstname="", age: int = 0,
                  gender=Gender.NotSpecified,
                  department=Department.NotSpecified):
         super(Person, self).__init__(lastname, firstname, age, gender)
