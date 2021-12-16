@@ -18,4 +18,4 @@ class Person:
         self.gender = gender
 
     def __str__(self):
-        return "Name: " + self.name + "\nage\t: " + self.age + "\ngender\t: " + self.gender
+        return "Firstname: " + self.firstname + " Lastname: " + self.lastname + "\nage\t: " + str(self.age) + "\ngender\t: " + str(self.gender)

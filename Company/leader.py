@@ -11,6 +11,6 @@ class Leader(Employee):
         self.firstname = firstname
         self.age = age
         self.gender = gender
-        super(Employee, self).__init__(lastname, firstname, age, gender, department)
+        super().__init__(lastname, firstname, age, gender, department)
     def __str__(self):
         return super(Leader, self).__str__()
