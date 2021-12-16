@@ -11,8 +11,8 @@ class Company:
         self.name = name
 
     def amount_of_worker(self):
-        return self.workers is not None if len(
-            self.workers) else 0
+        return self.employee is not None if len(
+            self.employee) else 0
 
     def amount_of_group_leader(self):
         return self.group_leaders is not None if len(
@@ -22,7 +22,7 @@ class Company:
         return len(self.find_departments())
 
     def find_departments(self):
-        return self.sub_find_departments(self.workers) + self.sub_find_departments(self.group_leaders)
+        return self.sub_find_departments(self.employee) + self.sub_find_departments(self.group_leaders)
 
     def sub_find_departments(self, people):
         departments: list = []
@@ -39,12 +39,12 @@ class Company:
         return collections.Counter(departments)
 
     def find_amount_of_participates_per_departments(self):
-        temp_worker = self.group_leaders + self.workers;
+        temp_worker = self.group_leaders + self.employee
         temp_dict: dict = {}
         for d in self.find_departments():
             temp_dict[d] = 0
-        for worker in temp_worker:
-            temp_dict[worker.department] = temp_dict[worker.department] + 1
+        for employee in temp_worker:
+            temp_dict[employee.department] = temp_dict[employee.department] + 1
         return temp_dict
 
     def find_biggest_department(self):
@@ -63,7 +63,7 @@ class Company:
         return new_dict
 
     def gender_spread(self):
-        people = self.workers + self.group_leaders
+        people = self.employee + self.group_leaders
         spreading = {}
         for g in Gender:
             spreading[g] = 0

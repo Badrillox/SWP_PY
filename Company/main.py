@@ -6,8 +6,7 @@ from company import Company
 from department import Department
 if __name__ == "__main__":
     empty_person = Person()
-    person = Person(1, "Jackson", "Kevin", 19, Gender.Male, Department.Development)
-    empty_worker = Employee()
+    person = Person(1, "Jackson", "Kevin", 19, Gender.Male)
     worker = Employee("Perktold", "Michael", 19, Gender.Male, Department.Development)
     #subordinates = [person, worker]
     worker.to_string()
