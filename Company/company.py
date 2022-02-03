@@ -6,9 +6,11 @@ from department import Department
 
 
 class Company:
-    def __init__(self, department=Department.NotSpecified, name=""):
+    def __init__(self, employee, group_leaders, department=Department.NotSpecified, name=""):
         self.department = department
         self.name = name
+        self.employee = employee
+        self.group_leaders = group_leaders
 
     def amount_of_worker(self):
         return self.employee is not None if len(
