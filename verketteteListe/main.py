@@ -174,15 +174,46 @@ class verketteListe:
             current_id = current_id + 1
         return
 
+    def insert_before_Node(self):
+        item_value = int(input("Welches Element sollte vorher eingefügt werden?: "))
+        item_value_before = int(input("Vor welchem Element sollte es eingefügt werden?: "))
+        print(list.insertBefore(item_value_before, item_value))
+        self.ausgabe()
+
+    def insert_after_node(self):
+        item_value = int(input("Welches Element sollte ausgewählt werden?: "))
+        item_value_after = int(input("Welches Element sollte danach eingefügt werden?: "))
+        print(list.insertAfter(item_value, item_value_after))
+        self.ausgabe()
+
+    def delete_after_node(self):
+        item_value = int(input("Welche Datei sollte danach entfernt werden: "))
+        print(list.deleteAfter(item_value))
+        self.ausgabe()
+
+    def delete_before_node(self):
+        item_value = int(input("Welche Datei sollte davor entfernt werden: "))
+        print(list.deleteBefore(item_value))
+        self.ausgabe()
+
     def menu(self):
         repeat = True
         answer = None
         while (repeat):
-            answer = input("Löschen [l] - Suche [s] - Beenden [any]").lower()
+            answer = input("Löschen [l] - Suche [s] - InsertAfter[i] - InsertBefore[a] - DeleteBefore[d] - DeleteAfter[v]"
+                           " - Beenden [any]").lower()
             if answer == "l":
                 self.remove()
             elif answer == "s":
                 self.searching()
+            elif answer == "i":
+                self.insert_after_node()
+            elif answer == "a":
+                self.insert_before_Node()
+            elif answer == "d":
+                self.delete_before_node()
+            elif answer == "v":
+                self.delete_after_node()
             else:
                 repeat = False
                 print("Verlassen")
